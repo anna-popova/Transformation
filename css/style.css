@@ -21,6 +21,8 @@
 
 html {
   scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
   /*Плавная прокрутка страницы*/
 }
 
@@ -36,6 +38,12 @@ body {
 img {
   max-width: 100%;
   height: auto;
+}
+.bg{
+  background-image: url(../image/favicon.png);
+  background-color: var(--basic-grey);
+  background-repeat: no-repeat;
+  background-position: 0 0;
 }
 
 .btn.btn-card {
