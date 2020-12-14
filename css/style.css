@@ -110,3 +110,15 @@ img {
   color: var(--basic-white);
   background-color: var(--basic-grey);
   padding: .5rem 0 1.3rem .5rem;
+}
+
+.container-results {
+  background-color: var(--basic-red);
+}
+
+.card-result {
+  background-color: var(--basic-red);
+  border:none;
+  margin: 2rem 0;
+  width: 18rem; /*250px*/
+}
