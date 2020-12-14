@@ -118,7 +118,35 @@ img {
 
 .card-result {
   background-color: var(--basic-red);
-  border:none;
+  border: none;
   margin: 2rem 0;
-  width: 18rem; /*250px*/
+  width: 18rem;
+  /*250px*/
+}
+
+.form {
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  font-family: "Roboto";
+  text-align: left;
+}
+
+
+.decoration {
+  width: 12rem;
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  border: 1px solid white;
+}
+
+.decoration:hover {
+  background-color: var(--basic-white);
+  color: var(--basic-red);
+  border: 1px solid red;
+}
+
+.decoration:active {
+  background-color: var(--basic-black);
+  color: var(--basic-red);
+  border: 1px solid red;
 }
