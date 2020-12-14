@@ -40,6 +40,11 @@ img {
   height: auto;
 }
 
+header{
+  background-color: var(--basic-red);
+  color: var(--basic-white);
+  font-family: "RobotoMedium";
+}
 .bg {
   background-image: url(../image/favicon.png);
   background-color: var(--basic-grey);
