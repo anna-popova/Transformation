@@ -39,7 +39,8 @@ img {
   max-width: 100%;
   height: auto;
 }
-.bg{
+
+.bg {
   background-image: url(../image/favicon.png);
   background-color: var(--basic-grey);
   background-repeat: no-repeat;
@@ -75,3 +76,37 @@ img {
   border-bottom: 1px solid rgba();
   transition-duration: 0.3s;
 }
+
+.faq {
+  background-color: var(--basic-grey);
+  color: var(--basic-white);
+}
+
+.list-question {
+  font-family: 'Roboto';
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+.list-question__decoration {
+  margin-left: .5rem;
+}
+
+.list-question__decoration:nth-child(odd) {
+  font-weight: bold;
+  list-style-type: "В.";
+  list-style-position: outside;
+  text-transform: uppercase;
+  color: var(--basic-white);
+  background-color: var(--basic-grey);
+  padding-top: 1rem;
+  padding-left: .5rem;
+}
+
+.list-question__decoration:nth-child(even) {
+  list-style-type: "О.";
+  margin-bottom: 1.2rem;
+  list-style-position: outside;
+  color: var(--basic-white);
+  background-color: var(--basic-grey);
+  padding: .5rem 0 1.3rem .5rem;
