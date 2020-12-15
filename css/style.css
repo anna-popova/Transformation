@@ -46,6 +46,14 @@ header {
   font-family: "RobotoMedium";
 }
 
+#go-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2;
+}
+
 .bg {
   background-image: url(../image/favicon.png);
   background-color: var(--basic-grey);
