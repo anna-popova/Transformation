@@ -40,11 +40,12 @@ img {
   height: auto;
 }
 
-header{
+header {
   background-color: var(--basic-red);
   color: var(--basic-white);
   font-family: "RobotoMedium";
 }
+
 .bg {
   background-image: url(../image/favicon.png);
   background-color: var(--basic-grey);
@@ -94,10 +95,6 @@ header{
 }
 
 .faq-list__question {
-  margin-left: .5rem;
-}
-
-.faq-list__question:nth-child(odd) {
   font-weight: bold;
   list-style-type: "В.";
   list-style-position: outside;
@@ -106,15 +103,15 @@ header{
   background-color: var(--basic-grey);
   padding-top: 1rem;
   padding-left: .5rem;
+  margin-left: .5rem;
 }
 
-.faq-list__question:nth-child(even) {
-  list-style-type: "О.";
-  margin-bottom: 1.2rem;
-  list-style-position: outside;
-  color: var(--basic-white);
-  background-color: var(--basic-grey);
-  padding: .5rem 0 1.3rem .5rem;
+.faq-list__answer {
+  font-family: 'Roboto';
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2em;
+  text-transform: none;
 }
 
 .container-results {
@@ -135,7 +132,6 @@ header{
   font-family: "Roboto";
   text-align: left;
 }
-
 
 .decoration {
   width: 12rem;
