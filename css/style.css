@@ -87,17 +87,17 @@ header{
   color: var(--basic-white);
 }
 
-.list-question {
+.faq-list {
   font-family: 'Roboto';
   font-size: 16px;
   line-height: 1.2em;
 }
 
-.list-question__decoration {
+.faq-list__question {
   margin-left: .5rem;
 }
 
-.list-question__decoration:nth-child(odd) {
+.faq-list__question:nth-child(odd) {
   font-weight: bold;
   list-style-type: "В.";
   list-style-position: outside;
@@ -108,7 +108,7 @@ header{
   padding-left: .5rem;
 }
 
-.list-question__decoration:nth-child(even) {
+.faq-list__question:nth-child(even) {
   list-style-type: "О.";
   margin-bottom: 1.2rem;
   list-style-position: outside;
