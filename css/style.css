@@ -104,7 +104,6 @@ header {
 
 .faq-list__question {
   font-weight: bold;
-  list-style-type: "В.";
   list-style-position: outside;
   text-transform: uppercase;
   color: var(--basic-white);
