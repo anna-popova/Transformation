@@ -54,33 +54,8 @@ header {
   z-index: 2;
 }
 
-.bg {
-  background-image: url(../image/favicon.png);
-  background-color: var(--basic-grey);
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.btn.btn-card {
-  text-decoration: none;
-  color: #ffffff;
-  box-shadow: 0 0 5px;
-  width: 100%;
-  margin-bottom: 30px;
-  font-size: 1.3rem;
-}
-
-.btn:hover {
-  color: #ffffff;
-  background-color: #ec3642;
-}
-
-.bg-even {
-  background-color: var();
-}
-
 .navbar {
-  font-family: 'RobotoMedium';
+  font-family: "RobotoMedium";
   font-size: 14px;
   line-height: 1.2em;
   font-weight: 700;
@@ -91,13 +66,18 @@ header {
   transition-duration: 0.3s;
 }
 
+.about-project {
+  background-color: var(--basic-grey);
+  font-family: "Roboto", sans-serif;
+}
+
 .faq {
   background-color: var(--basic-grey);
   color: var(--basic-white);
 }
 
 .faq-list {
-  font-family: 'Roboto';
+  font-family: "Roboto";
   font-size: 16px;
   line-height: 1.2em;
 }
