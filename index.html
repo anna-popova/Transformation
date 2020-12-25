@@ -235,11 +235,14 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
   </script>
+  <!-- https://github.com/RobinHerbots/Inputmask -->
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/3/jquery.inputmask.bundle.js"></script>
   <!--<script src="js/app.js"></script>-->
   <script src="js/script.min.js"></script>
   <script src="js/app.js"></script>
   <script>
     jQuery(document).ready(function() {
+      $("#txt-phone").inputmask({"mask": "8(999)999-99-99"});
       $("#btn-send-form").click(function() {
         //
         // NOTE!
@@ -251,7 +254,7 @@
           $("#txt-name")[0].focus();
           return;
         }
-        var phone = $("#txt-phone")[0].value;
+        var phone = $("#txt-phone")[0].value.replace(/^8/,7).replace(/-/g,'').replace(/[()]/g,'');
         if (phone.length < 8) {
           alert('Укажите укажите номер телефона в формате 7xxxXXXxxXX');
           $("#txt-phone")[0].focus();
