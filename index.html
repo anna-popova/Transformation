@@ -126,38 +126,38 @@
         После заполнения заявки наш бот отправит информацию куратору в Telegram и затем куратор напишет Вам в тот мессенджер, которым пользуетесь Вы.</p>
       <div class="container d-flex pt-5 pb-5">
         <div class="row">
-          <form class="col-md" data-form-type="contacts" method="post">
+          <div class="col-md" data-form-type="contacts" method="post">
             <div class="form-group">
-              <label for="exampleInputUsername1">Имя</label>
-              <input type="text" class="form-control" id="exampleInputUsername1" placeholder="Ваше имя">
+              <label for="txt-name">Имя</label>
+              <input type="text" class="form-control" id="txt-name" placeholder="Ваше имя">
             </div>
             <div class="form-group">
-              <label for="exampleInputTelephone1">Телефон</label>
-              <input type="tel" class="form-control" id="exampleInputTelephone1" placeholder="8(921)100-00-00">
+              <label for="txt-phone">Телефон</label>
+              <input type="tel" class="form-control" id="txt-phone" placeholder="8(921)100-00-00">
             </div>
             <!--Checkbox-->
             <div class="form-check form-group">
-              <input class="form-check-input" type="checkbox" value="Whatsapp" id="defaultCheck1">
-              <label class="form-check-label" for="defaultCheck1">
+              <input class="form-check-input" type="checkbox" value="Whatsapp" id="check-wa">
+              <label class="form-check-label" for="check-wa">
                 Whatsapp
               </label>
             </div>
             <div class="form-check form-group">
-              <input class="form-check-input" type="checkbox" value="Viber" id="defaultCheck1">
-              <label class="form-check-label" for="defaultCheck1">
+              <input class="form-check-input" type="checkbox" value="Viber" id="check-vb">
+              <label class="form-check-label" for="check-vb">
                 Viber
               </label>
             </div>
             <div class="form-check form-group">
-              <input class="form-check-input" type="checkbox" value="Telegram" id="defaultCheck2">
-              <label class="form-check-label" for="defaultCheck2">
+              <input class="form-check-input" type="checkbox" value="Telegram" id="check-tg">
+              <label class="form-check-label" for="check-tg">
                 Telegram
               </label>
             </div>
             <div class="form-group">
-              <button type="submit" class="btn btn-outline text-white decoration">Отправить</button>
+              <button id="btn-send-form" class="btn btn-outline text-white decoration">Отправить</button>
             </div>
-          </form>
+          </div>
           <div class="container  col-md">
             <img src="image/running-girl.jpg" class="card-img img-fluid" alt="Бегущая спортивная девушка на темном фоне">
             <div class="card-img-overlay">
@@ -235,6 +235,80 @@
   <!--<script src="js/app.js"></script>-->
   <script src="js/script.min.js"></script>
   <script src="js/app.js"></script>
+  <script>
+    jQuery(document).ready(function() {
+      $("#btn-send-form").click(function() {
+        //
+        // NOTE!
+        // Собираем данные формы в JSON
+        //
+        var name = $("#txt-name")[0].value;
+        if (name.length < 2) {
+          alert('Укажите Ваше имя');
+          $("#txt-name")[0].focus();
+          return;
+        }
+        var phone = $("#txt-phone")[0].value;
+        if (phone.length < 8) {
+          alert('Укажите укажите номер телефона в формате 7xxxXXXxxXX');
+          $("#txt-phone")[0].focus();
+          return;
+        }
+        var wa = $("#check-wa")[0].checked;
+        var vb = $("#check-vb")[0].checked;
+        var tg = $("#check-tg")[0].checked;
+
+        var formData = {
+          name: name,
+          phone: phone,
+          whatsapp: wa,
+          viber: vb,
+          telegram: tg,
+        }
+
+        console.log('Отправляю данные в Телеграм-бот https://t.me/annagrabbot:', JSON.stringify(formData));
+
+        //
+        // NOTE!
+        // Делаем кнопку "Отправить" недоступной для пользователя
+        //
+        $("#btn-send-form").addClass('disabled');
+        $("#btn-send-form").attr('disabled', 'disabled');
+
+        //
+        // NOTE!
+        // Собираем данные формы в JSON
+        //
+        $.ajax({
+          url: 'https://annagrabbot.herokuapp.com/sendform',
+          type: 'POST',
+          data: formData,
+          success: function(data) {
+            //
+            // NOTE!
+            // Делаем кнопку "Отправить" доступной для пользователя
+            //
+            console.log('Данные отправлены');
+            $("#btn-send-form").removeClass('disabled');
+            $("#btn-send-form").removeAttr('disabled');
+
+            alert('Заявка отправлена! Пожалуйста, ожидайте. Куратор скоро свяжется с Вами');
+          },
+          error: function(error) {
+            //
+            // NOTE!
+            // Делаем кнопку "Отправить" доступной для пользователя
+            //
+            console.log('Ошибка! Данные не отправлены :(');
+            $("#btn-send-form").removeClass('disabled');
+            $("#btn-send-form").removeAttr('disabled');
+
+            alert('Ошибка! Заявка не отправлена! Перейдите в раздел FAQ');
+          }
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>
