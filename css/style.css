@@ -180,3 +180,8 @@ header {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+.slogan-light {
+  font-family: "Roboto";
+  font-weight: 300;
+}
