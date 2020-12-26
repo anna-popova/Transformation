@@ -139,22 +139,25 @@
               <input type="tel" class="form-control" id="txt-phone" placeholder="8(921)100-00-00">
             </div>
             <!--Checkbox-->
-            <div class="form-check form-group">
-              <input class="form-check-input" type="checkbox" value="Whatsapp" id="check-wa">
+            <div class="form-check form-group pl-0">
               <label class="form-check-label" for="check-wa">
+                <input class="form-check-input" type="checkbox" value="Whatsapp" id="check-wa">
                 Whatsapp
+                <span class="checkmark"></span>
               </label>
             </div>
-            <div class="form-check form-group">
-              <input class="form-check-input" type="checkbox" value="Viber" id="check-vb">
+            <div class="form-check form-group pl-0">
               <label class="form-check-label" for="check-vb">
+                <input class="form-check-input" type="checkbox" value="Viber" id="check-vb">
                 Viber
+                <span class="checkmark"></span>
               </label>
             </div>
-            <div class="form-check form-group">
-              <input class="form-check-input" type="checkbox" value="Telegram" id="check-tg">
+            <div class="form-check form-group pl-0">
               <label class="form-check-label" for="check-tg">
+                <input class="form-check-input" type="checkbox" value="Telegram" id="check-tg">
                 Telegram
+                <span class="checkmark"></span>
               </label>
             </div>
             <div class="form-group">
@@ -242,7 +245,9 @@
   <script src="js/app.js"></script>
   <script>
     jQuery(document).ready(function() {
-      $("#txt-phone").inputmask({"mask": "8(999)999-99-99"});
+      $("#txt-phone").inputmask({
+        "mask": "8(999)999-99-99"
+      });
       $("#btn-send-form").click(function() {
         //
         // NOTE!
@@ -254,7 +259,7 @@
           $("#txt-name")[0].focus();
           return;
         }
-        var phone = $("#txt-phone")[0].value.replace(/^8/,7).replace(/-/g,'').replace(/[()]/g,'');
+        var phone = $("#txt-phone")[0].value.replace(/^8/, 7).replace(/-/g, '').replace(/[()]/g, '');
         if (phone.length < 8) {
           alert('Укажите укажите номер телефона в формате 7xxxXXXxxXX');
           $("#txt-phone")[0].focus();
