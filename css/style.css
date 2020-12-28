@@ -181,6 +181,19 @@ header {
   transform: rotate(45deg);
 }
 
+.form-btn {
+	position: relative;
+}
+
+.form-loader {
+	position: absolute;
+	top: 50%;
+	right: -47px;
+	transform: translateY(-50%);
+	opacity: 0;
+	transition: opacity .2s;
+}
+
 .slogan-light {
   font-family: "Roboto";
   font-weight: 300;
