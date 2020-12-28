@@ -67,16 +67,6 @@ header {
   transition-duration: 0.3s;
 }
 
-.about-project {
-  background-color: var(--basic-grey);
-  font-family: "Roboto", sans-serif;
-}
-
-.faq {
-  background-color: var(--basic-grey);
-  color: var(--basic-white);
-}
-
 .faq-list {
   font-family: "Roboto";
   font-size: 16px;
@@ -87,8 +77,6 @@ header {
   font-weight: bold;
   list-style-position: outside;
   text-transform: uppercase;
-  color: var(--basic-white);
-  background-color: var(--basic-grey);
   padding-top: 1rem;
   padding-left: .5rem;
   margin-left: .5rem;
@@ -182,16 +170,16 @@ header {
 }
 
 .form-btn {
-	position: relative;
+  position: relative;
 }
 
 .form-loader {
-	position: absolute;
-	top: 50%;
-	right: -47px;
-	transform: translateY(-50%);
-	opacity: 0;
-	transition: opacity .2s;
+  position: absolute;
+  top: 50%;
+  right: -47px;
+  transform: translateY(-50%);
+  opacity: 0;
+  transition: opacity .2s;
 }
 
 .slogan-light {

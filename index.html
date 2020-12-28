@@ -35,16 +35,17 @@
           <li class="nav-item"><a class="nav-link" href="#about-project">О проекте</a></li>
           <li class="nav-item"><a class="nav-link" href="#results">Результаты</a></li>
           <li class="nav-item"><a class="nav-link" href="#programme">Программа</a></li>
+          <li class="nav-item"><a class="nav-link" href="#price">Цена</a></li>
           <li class="nav-item"><a class="nav-link" href="#registration">Участвовать</a></li>
           <li class="nav-item"><a class="nav-link" href="#questions">FAQ</a></li>
         </ul>
       </div>
     </div>
   </nav>
-  <section id="about-project" class="text-light">
-    <div class="container-fluid about-project">
-      <h2 class="container about-project__title pt-5">О проекте</h2>
-      <p class="container about-project__text pt-3 pb-1">Сложно найти такого человека, который ни разу в жизни не мечтал бы выглядеть лучше.
+  <section id="about-project" class="text-light bg-dark">
+    <div class="container-fluid">
+      <h2 class="container pt-5">О проекте</h2>
+      <p class="container pt-3 pb-1">Сложно найти такого человека, который ни разу в жизни не мечтал бы выглядеть лучше.
         &laquo;Лучше&raquo; у каждого свое&#58; кто&#150;то мечтает постройнеть, кто&#150;то мечтает накачать мышцы, набрать вес, загореть, обрести фигуру своей мечты.
       </p>
       <p class="container about-project__text">Результаты социологических исследований показывают глобальный рост средней продолжительности жизни.
@@ -121,14 +122,14 @@
       </ol>
     </div>
   </section>
-  <sectio id="price">
+  <section class="bg-dark text-light" id="price">
     <div class="container">
       <h2 class="pt-5">Цена</h2>
-      <p class="pt-3">Только сейчас цена на преображение 4.0 с 4 по 26 января - 500 рублей<br>
+      <p class="pt-3 pb-5 m-0">Только сейчас цена на преображение 4.0 с 4 по 26 января - 500 рублей<br>
         Каждый четвертый поток - БЕСПЛАТНО</p>
     </div>
-  </sectio>
-  <section id="registration" class="pt-5">
+  </section>
+  <section id="registration">
     <div class="container-fluid form">
       <h2 class="container form-title pt-5">Свяжитесь с нами</h2>
       <p class="container pt-3">Для участия в проекте или дополнительных вопросов.</p>
@@ -166,16 +167,16 @@
               </label>
             </div>
             <div class="form-group">
-							<button id="btn-send-form" class="btn form-btn btn-light text-danger border-danger" style="width:150px">
-								Отправить
-								<svg class="form-loader" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="34px" height="34px" viewBox="0 0 128 128" xml:space="preserve">
-									<rect x="0" y="0" width="100%" height="100%" fill="transparent" />
-									<g>
-										<path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#ffffff"/>
-										<animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="800ms" repeatCount="indefinite"></animateTransform>
-									</g>
-								</svg>
-							</button>
+              <button id="btn-send-form" class="btn form-btn btn-light text-danger border-danger" style="width:150px">
+                Отправить
+                <svg class="form-loader" xmlns:svg="http://www.w3.org/2000/svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.0" width="34px" height="34px" viewBox="0 0 128 128" xml:space="preserve">
+                  <rect x="0" y="0" width="100%" height="100%" fill="transparent" />
+                  <g>
+                    <path d="M75.4 126.63a11.43 11.43 0 0 1-2.1-22.65 40.9 40.9 0 0 0 30.5-30.6 11.4 11.4 0 1 1 22.27 4.87h.02a63.77 63.77 0 0 1-47.8 48.05v-.02a11.38 11.38 0 0 1-2.93.37z" fill="#ffffff" />
+                    <animateTransform attributeName="transform" type="rotate" from="0 64 64" to="360 64 64" dur="800ms" repeatCount="indefinite"></animateTransform>
+                  </g>
+                </svg>
+              </button>
             </div>
           </div>
           <div class="container  col-md">
@@ -191,8 +192,8 @@
       </div>
     </div>
   </section>
-  <section id="questions">
-    <div class="container-fluid faq">
+  <section id="questions" class="text-light bg-dark">
+    <div class="container-fluid">
       <h2 class="container pt-5">FAQ</h2>
       <ol class="container mb-0 d-flex flex-column faq-list">
         <li class="faq-list__question">Это платно?
@@ -308,15 +309,15 @@
           url: 'https://annagrabbot.herokuapp.com/sendform',
           type: 'POST',
           data: formData,
-					beforeSend: function() {
-        		$('.form-loader').css("opacity", "1");
-    			},
+          beforeSend: function() {
+            $('.form-loader').css("opacity", "1");
+          },
           success: function(data) {
             //
             // NOTE!
             // Делаем кнопку "Отправить" доступной для пользователя
             //
-						$('.form-loader').css("opacity", "0");
+            $('.form-loader').css("opacity", "0");
             console.log('Данные отправлены');
             $("#btn-send-form").removeClass('disabled');
             $("#btn-send-form").removeAttr('disabled');
@@ -328,7 +329,7 @@
             // NOTE!
             // Делаем кнопку "Отправить" доступной для пользователя
             //
-						$('.form-loader').css("opacity", "0");
+            $('.form-loader').css("opacity", "0");
             console.log('Ошибка! Данные не отправлены :(');
             $("#btn-send-form").removeClass('disabled');
             $("#btn-send-form").removeAttr('disabled');
