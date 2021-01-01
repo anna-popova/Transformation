@@ -12,6 +12,13 @@
   src: local("RobotoMedium"), url(../fonts/robotomedium.woff2) format("woff2"), url(../fonts/robotomedium.woff) format("woff")
 }
 
+@font-face {
+	font-family: 'RobotoLight';
+	font-style: normal;
+	font-weight: 200;
+	src: local("Roboto-Light"), url(../fonts/Roboto-Light.woff2) format("woff2"), url(../fonts/Roboto-Light.eot) format("eot")
+}
+
 :root {
   --basic-grey: #242424;
   --basic-black: #000000;
@@ -183,6 +190,6 @@ header {
 }
 
 .slogan-light {
-  font-family: "Roboto";
-  font-weight: 300;
+  font-family: "RobotoLight";
+  font-weight: 200;
 }
