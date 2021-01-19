@@ -376,14 +376,14 @@
           type: 'POST',
           data: formData,
           beforeSend: function() {
-            $('.form-loader').css("opacity", "1");
+            $('.form-loader').css("display", "block");
           },
           success: function(data) {
             //
             // NOTE!
             // Делаем кнопку "Отправить" доступной для пользователя
             //
-            $('.form-loader').css("opacity", "0");
+            $('.form-loader').css("display", "none");
             console.log('Данные отправлены');
             $("#btn-send-form").removeClass('disabled');
             $("#btn-send-form").removeAttr('disabled');
@@ -395,7 +395,7 @@
             // NOTE!
             // Делаем кнопку "Отправить" доступной для пользователя
             //
-            $('.form-loader').css("opacity", "0");
+            $('.form-loader').css("display", "none");
             console.log('Ошибка! Данные не отправлены :(');
             $("#btn-send-form").removeClass('disabled');
             $("#btn-send-form").removeAttr('disabled');
