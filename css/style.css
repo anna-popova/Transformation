@@ -178,6 +178,7 @@ header {
 
 .form-btn {
   position: relative;
+  width: 150px;
 }
 
 .form-loader {
