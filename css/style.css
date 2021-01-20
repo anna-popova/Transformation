@@ -178,6 +178,7 @@ header {
 
 .form-btn {
   position: relative;
+  width: 150px;
 }
 
 .form-loader {
@@ -185,8 +186,7 @@ header {
   top: 50%;
   right: -47px;
   transform: translateY(-50%);
-  opacity: 0;
-  transition: opacity .2s;
+  display: none;
 }
 
 .slogan-light {
