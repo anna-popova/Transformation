@@ -54,6 +54,40 @@ header {
   font-family: "RobotoMedium";
 }
 
+.header-title {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .header-title {
+    text-align: left;
+  }
+}
+
+.img-logo {
+  width: 140px;
+  height: 180px;
+}
+
+@media screen and (min-width: 768px) {
+  .img-logo {
+    width: 100px;
+    height: 150px;
+  }
+}
+
+.wrapper-for-logo {
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper-for-logo {
+    display: flex;
+    justify-content: flex-start;
+  }
+}
+
 #go-top {
   display: none;
   position: fixed;
