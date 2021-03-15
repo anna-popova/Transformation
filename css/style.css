@@ -213,15 +213,23 @@ header {
 .form-btn {
   position: relative;
   width: 150px;
+  height: 40px;
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .form-loader {
-  position: absolute;
-  top: 50%;
-  right: -47px;
-  transform: translateY(-50%);
+  width: 80px;
   display: none;
+  z-index: 1;
+  position: absolute;
+  top: 5px;
+  right: 35px;
 }
+
+
 
 .slogan-light {
   font-family: "RobotoLight";

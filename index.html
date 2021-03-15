@@ -281,10 +281,11 @@
               </label>
             </div>
             <div class="form-group">
-              <button id="btn-send-form" class="btn form-btn btn-light text-danger border-danger">
-                Отправить
-              </button>
-              <object class="form-loader" type="image/svg+xml" data="spinner.svg"></object>
+              <a id="btn-send-form" class="btn form-btn btn-light text-danger border-danger" >
+                <span id="btn-send-form-text">Отправить</span>
+                <object class="form-loader" type="image/svg+xml" data="image/spinner.svg"></object>
+              </a>
+
             </div>
           </div>
           <div class="container  col-md">
@@ -404,8 +405,11 @@
         // NOTE!
         // Делаем кнопку "Отправить" недоступной для пользователя
         //
-        $("#btn-send-form").addClass('disabled');
-        $("#btn-send-form").attr('disabled', 'disabled');
+
+        $('#btn-send-form-text').hide();
+        $('#btn-send-form').addClass('disabled');
+
+
 
         //
         // NOTE!
@@ -416,17 +420,19 @@
           type: 'POST',
           data: formData,
           beforeSend: function() {
-            $('.form-loader').css("display", "block");
+            $('.form-loader').show();
           },
           success: function(data) {
             //
             // NOTE!
             // Делаем кнопку "Отправить" доступной для пользователя
             //
-            $('.form-loader').css("display", "none");
+
             console.log('Данные отправлены');
-            $("#btn-send-form").removeClass('disabled');
-            $("#btn-send-form").removeAttr('disabled');
+
+            $('.form-loader').hide();
+            $('#btn-send-form-text').show();
+            $('#btn-send-form').removeClass('disabled');
 
             alert('Заявка отправлена! Пожалуйста, ожидайте. Куратор скоро свяжется с Вами');
           },
@@ -435,10 +441,11 @@
             // NOTE!
             // Делаем кнопку "Отправить" доступной для пользователя
             //
-            $('.form-loader').css("display", "none");
             console.log('Ошибка! Данные не отправлены :(');
-            $("#btn-send-form").removeClass('disabled');
-            $("#btn-send-form").removeAttr('disabled');
+
+            $('.form-loader').hide();
+            $('#btn-send-form-text').show();
+            $('#btn-send-form').removeClass('disabled');
 
             alert('Ошибка! Заявка не отправлена! Перейдите в раздел FAQ');
           }
