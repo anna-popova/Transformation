@@ -19,6 +19,11 @@
   src: local("RobotoLight"), url(../fonts/RobotoLight.woff2) format("woff2"), url(../fonts/RobotoLight.woff) format("woff")
 }
 
+@font-face {
+  font-family: Raleway-Bold;
+  src: url(../fonts/Raleway-Bold.ttf);
+}
+
 :root {
   --basic-grey: #242424;
   --basic-black: #000000;
@@ -234,4 +239,21 @@ header {
 .slogan-light {
   font-family: "RobotoLight";
   font-weight: 100;
+}
+
+.section-header{
+  position: relative;
+  font-family: 'Raleway-Bold';
+  font-size: 36px;
+  color: #444444;
+}
+
+.section-header::after{
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #EE3625;
+  left: 15px;
+  bottom: -10px;
 }
