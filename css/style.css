@@ -20,8 +20,10 @@
 }
 
 @font-face {
-  font-family: Raleway-Bold;
-  src: url(../fonts/Raleway-Bold.ttf);
+  font-family: 'Raleway-Bold';
+  font-style: normal;
+  font-weight: 700;
+  src: local("Raleway-Bold"), url(../fonts/Raleway-Bold.woff) format("woff");
 }
 
 :root {
@@ -148,6 +150,58 @@ header {
   /*250px*/
 }
 
+.block-price {
+  box-sizing: border-box;
+  background-image: linear-gradient(#EE3625, #EE3625), linear-gradient(#EE3625, #EE3625), linear-gradient(#EE3625, #EE3625), linear-gradient(#EE3625, #EE3625);
+  background-repeat: no-repeat;
+  background-size: 35px 30px;
+  /*толщина и выступы*/
+  background-position: right top, left top, bottom right, left bottom;
+  border: 35px solid #EE3625;
+  text-align: center;
+  border-width: 35px 0;
+  padding: 30px 15px 20px;
+  margin: 65px 0;
+}
+
+.block-price__subtitle {
+  font-family: 'Raleway-Bold', sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  color: #444444;
+}
+
+.block-price__text {
+  font-family: 'Raleway-Bold', sans-serif;
+  font-size: 28px;
+  line-height: 33px;
+  color: #c4c4c4;
+}
+
+@media (max-device-width: 760px) {
+  .block-price__subtitle {
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+  .block-price__text {
+    font-size: 20px;
+    line-height: 25px;
+  }
+}
+
+@media (max-device-width: 568px) {
+  .block-price__subtitle {
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .block-price__text {
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
 .form {
   background-color: var(--basic-red);
   color: var(--basic-white);
@@ -234,21 +288,19 @@ header {
   right: 35px;
 }
 
-
-
 .slogan-light {
   font-family: "RobotoLight";
   font-weight: 100;
 }
 
-.section-header{
+.section-header {
   position: relative;
   font-family: 'Raleway-Bold';
   font-size: 36px;
   color: #444444;
 }
 
-.section-header::after{
+.section-header::after {
   content: "";
   position: absolute;
   width: 100px;
