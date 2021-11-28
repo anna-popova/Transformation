@@ -56,9 +56,23 @@ img {
 }
 
 header {
-  background-color: var(--basic-red);
+  min-height: 518px;
+  background-image: url(../image/main-image-mobile.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   color: var(--basic-white);
   font-family: "RobotoMedium";
+  position: relative;
+}
+
+header::before{
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-color: rgba(64, 14, 14, 0.54);
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .header-title {
@@ -80,6 +94,11 @@ header {
   .img-logo {
     width: 100px;
     height: 150px;
+  }
+
+  header{
+    min-height: 615px;
+    background-image: url(../image/main-image.png);
   }
 }
 
