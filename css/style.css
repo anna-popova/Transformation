@@ -20,10 +20,17 @@
 }
 
 @font-face {
+  font-family: 'Raleway-Regular';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway-Regular"), url(../fonts/Raleway-Regular.woff2) format("woff2"), url(../fonts/Raleway-Regular.woff) format("woff");
+}
+
+@font-face {
   font-family: 'Raleway-Bold';
   font-style: normal;
   font-weight: 700;
-  src: local("Raleway-Bold"), url(../fonts/Raleway-Bold.woff) format("woff");
+  src: local("Raleway-Bold"), url(../fonts/Raleway-Bold.woff2) format("woff2"), url(../fonts/Raleway-Bold.woff) format("woff");
 }
 
 :root {
