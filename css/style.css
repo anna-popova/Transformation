@@ -37,7 +37,7 @@
   --basic-grey: #242424;
   --basic-black: #000000;
   --basic-white: #ffffff;
-  --basic-red: #ec3642;
+  --basic-red: #ec3625;
   --checkbox-hover: #ccc;
 }
 
@@ -229,10 +229,80 @@ header::before{
 }
 
 .form {
+  color: #444444;
+	width: 100%;
+  text-align: center;
+	margin: 70px auto;
+	background-color: #555555;
+	padding: 5px 0;
+}
+
+.form__contacts{
+	position: relative;
+	margin-bottom: 30px;
+}
+input[type="text"], input[type="tel"]{
+  width: 561px;
+  height: 66px;
+	font-family: 'Raleway-Regular';
+	font-size: 20px;
+	line-height: 23px;
+  border-radius: 5px;
+  border: 1px solid #C4C4C4;
+  box-sizing: border-box;
+  padding-left: 40px;
+}
+@media (max-device-width: 769px) {
+  input[type="text"], input[type="tel"]{
+		width: 450px;
+	}
+}
+@media (max-device-width: 568px) {
+	input[type="text"], input[type="tel"]{
+		width: 280px;
+	}
+}
+.form__contacts--name::before{
+  content: '';
+	background-image: url(..\image\ic20-user.png);
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: cover;
+  position: absolute;
+  padding: 19px 17px;
+}
+.form__contacts--telephone::before{
+	background-image: url(..\image\ic20-user.png);
+	width: 40px;
+	height: 40px;
+	background-repeat: no-repeat;
+	background-size: cover;
+  position: absolute;
+  padding: 19px 17px;
+}
+
+
+.button-send{
+  padding: 18px 25px;
   background-color: var(--basic-red);
-  color: var(--basic-white);
-  font-family: "Roboto";
-  text-align: left;
+  border: 1px solid var(--basic-red);
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+}
+.button-send:hover{
+  transition: all 0.3s;
+  opacity: 80%;
+}
+
+.button-send span{
+	font-family: 'Raleway-Bold';
+	text-transform: uppercase;
+  font-size: 22px;
+  line-height: 26px;
+	color: var(--basic-white);
 }
 
 .form-check-label {
