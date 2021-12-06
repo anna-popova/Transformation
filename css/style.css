@@ -39,6 +39,7 @@
   --basic-white: #ffffff;
   --basic-red: #ec3625;
   --checkbox-hover: #ccc;
+	--form-border: #c4c4c4;
 }
 
 html {
@@ -230,60 +231,81 @@ header::before{
 
 .form {
   color: #444444;
-	width: 100%;
   text-align: center;
-	margin: 70px auto;
-	background-color: #555555;
+	margin: 70px 251px;
+	display: flex;
+	flex-direction: column;
+	/* background-color: #555555; */
 	padding: 5px 0;
+	font-family: 'Raleway-Regular';
+	font-size: 20px;
+	line-height: 23px;
 }
 
-.form__contacts{
+@media (max-device-width: 1200px) {
+	.form {
+		margin: 70px 50px;
+	}
+}
+
+@media (max-device-width: 568px) {
+	.form {
+		margin: 43px auto;
+	}
+}
+
+.form__contacts {
 	position: relative;
 	margin-bottom: 30px;
 }
-input[type="text"], input[type="tel"]{
-  width: 561px;
+
+input[type="text"], input[type="tel"] {
+  width: 100%;
   height: 66px;
 	font-family: 'Raleway-Regular';
 	font-size: 20px;
 	line-height: 23px;
   border-radius: 5px;
-  border: 1px solid #C4C4C4;
+  border: 1px solid var(--form-border);
   box-sizing: border-box;
-  padding-left: 40px;
+  padding-left: 74px;
 }
-@media (max-device-width: 769px) {
-  input[type="text"], input[type="tel"]{
-		width: 450px;
-	}
-}
-@media (max-device-width: 568px) {
-	input[type="text"], input[type="tel"]{
-		width: 280px;
-	}
-}
-.form__contacts--name::before{
-  content: '';
-	background-image: url(..\image\ic20-user.png);
-	width: 40px;
-	height: 40px;
+
+.form__contacts--name::before {
+	content: '';
+	background-image: url(../image/ic20-user.svg);
+	left: 15px;
+	top: 10px;
 	background-repeat: no-repeat;
 	background-size: cover;
   position: absolute;
-  padding: 19px 17px;
-}
-.form__contacts--telephone::before{
-	background-image: url(..\image\ic20-user.png);
-	width: 40px;
+  width: 40px;
 	height: 40px;
+}
+
+.form__contacts--telephone::before {
+	content: '';
+	background-image: url(../image/ic24-phone.svg);
+	left: 15px;
+	top: 10px;
 	background-repeat: no-repeat;
 	background-size: cover;
   position: absolute;
-  padding: 19px 17px;
+  width: 40px;
+	height: 40px;
 }
 
+.form__send {
+	padding-top: 57px;
+}
 
-.button-send{
+@media (max-device-width: 767px) {
+	.form__send {
+		padding-top: 50px;
+	}
+}
+
+.button-send {
   padding: 18px 25px;
   background-color: var(--basic-red);
   border: 1px solid var(--basic-red);
@@ -291,13 +313,15 @@ input[type="text"], input[type="tel"]{
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
+	position: relative;
 }
-.button-send:hover{
+
+.button-send:hover {
   transition: all 0.3s;
   opacity: 80%;
 }
 
-.button-send span{
+.button-send span {
 	font-family: 'Raleway-Bold';
 	text-transform: uppercase;
   font-size: 22px;
@@ -305,65 +329,78 @@ input[type="text"], input[type="tel"]{
 	color: var(--basic-white);
 }
 
-.form-check-label {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin-bottom: 12px;
-  cursor: pointer;
-  font-size: 22px;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+.flex-container {
+display: flex;
+flex-direction: row;
+align-items: center;
+padding-top: 20px;
 }
 
-.form-check-label input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+@media (max-device-width: 767px) {
+	.flex-container{
+	flex-direction: column;
+	align-items: start;
+	}
 }
 
-.checkmark {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 25px;
-  width: 25px;
-  background-color: #eee;
+.check {
+	padding-left: 50px;
+	position: relative;
+	cursor: pointer;
 }
 
-.form-check-label:hover input~.checkmark {
-  background-color: var(--checkbox-hover);
+.check-items {
+		padding-right: 70px;
 }
 
-.form-check-label input:checked~.checkmark {
-  background-color: var(--basic-grey);
+@media (max-device-width: 767px) {
+	.check-items{
+			padding-right: 0;
+			padding-bottom: 25px;
+	}
 }
+.check__input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	position: absolute;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	}
 
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
-}
+	.check__box {
+		position: absolute;
+		cursor: pointer;
+		margin-left: -50px;
+		margin-top: -10px;
+		width: 40px;
+		height: 40px;
+		border-radius: 5px;
+		border: 1px solid var(--form-border);
+	}
 
-.form-check-label input:checked~.checkmark:after {
-  display: block;
-}
+	.check__input:hover + .check__box {
+		border: 1px solid #ee3625;
+	}
 
-.form-check-label .checkmark:after {
-  left: 9px;
-  top: 6px;
-  width: 6px;
-  height: 10px;
-  border: solid red;
-  border-width: 0 3px 3px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
-}
+	/*Checked*/
+	.check__input:checked + .check__box::after {
+		position: absolute;
+		content: "";
+		width: 40px;
+		height: 34px;
+		background-image: url(../image/icon.svg);
+		bottom: 6px;
+		left: 5px;
+		background-repeat: no-repeat;
+	}
+
+/*Focused*/
+	.check__input:focus + .check__box {
+		border: 1px solid var(--basic-red);
+	}
 
 .form-btn {
   position: relative;
@@ -380,8 +417,6 @@ input[type="text"], input[type="tel"]{
   display: none;
   z-index: 1;
   position: absolute;
-  top: 5px;
-  right: 35px;
 }
 
 .slogan-light {
