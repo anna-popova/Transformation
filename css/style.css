@@ -230,9 +230,10 @@ header::before{
 }
 
 .form {
+  max-width: 600px;
   color: #444444;
   text-align: center;
-	margin: 70px 251px;
+	margin: 70px auto;
 	display: flex;
 	flex-direction: column;
 	/* background-color: #555555; */
@@ -240,12 +241,6 @@ header::before{
 	font-family: 'Raleway-Regular';
 	font-size: 20px;
 	line-height: 23px;
-}
-
-@media (max-device-width: 1200px) {
-	.form {
-		margin: 70px 50px;
-	}
 }
 
 @media (max-device-width: 568px) {
