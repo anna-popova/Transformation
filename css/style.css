@@ -69,7 +69,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   color: var(--basic-white);
-  font-family: "Raleway-Bold";
+  font-family: "RobotoMedium";
   position: relative;
 }
 
@@ -85,35 +85,11 @@ header::before{
 
 .header-title {
   text-align: center;
-  z-index: 1;
-}
-
-.header-title__text{
-  font-size: 24px;
-}
-
-.header-title__text-1{
-  font-size: 36px;
 }
 
 @media screen and (min-width: 768px) {
   .header-title {
-    text-align: center;
-  }
-  .header-title__text{
-    font-size: 36px;
-  }
-  .header-title__text-1{
-    font-size: 64px;
-  }
-  .slogan-light {
-    font-size: 24px;
-  }
-}
-
-@media screen and (min-width: 474px) {
-  .row{
-    flex-direction: column;
+    text-align: left;
   }
 }
 
@@ -143,7 +119,6 @@ header::before{
   .wrapper-for-logo {
     display: flex;
     justify-content: flex-start;
-    flex-direction: column;
   }
 }
 
@@ -440,9 +415,8 @@ padding-top: 20px;
 }
 
 .slogan-light {
-  font-family: "Raleway-Regular";
+  font-family: "RobotoLight";
   font-weight: 100;
-  font-size: 18px;
 }
 
 .section-header {
