@@ -250,61 +250,39 @@
       </div>
     </section>
     <section id="registration">
-      <div class="container-fluid form">
-        <h2 class="container pt-5 section-header">Свяжитесь с нами</h2>
-        <p class="container pt-3">Для участия в проекте или дополнительных вопросов.</p>
-        <div class="container d-flex pt-5 pb-5">
-          <div class="row">
-            <div class="col-md" data-form-type="contacts">
-              <div class="form-group">
-                <label for="txt-name">Имя</label>
-                <input type="text" class="form-control" id="txt-name" placeholder="Ваше имя">
-              </div>
-              <div class="form-group">
-                <label for="txt-phone">Телефон</label>
-                <input type="tel" class="form-control" id="txt-phone" placeholder="8(921)100-00-00">
-              </div>
-              <!--Checkbox-->
-              <div class="form-check form-group pl-0">
-                <label class="form-check-label" for="check-wa">
-                  <input class="form-check-input" type="checkbox" value="Whatsapp" id="check-wa">
-                  Whatsapp
-                  <span class="checkmark"></span>
+      <div class="container">
+        <h2 class="pt-5 section-header">Свяжитесь с нами</h2>
+        <form class="form" data-form-type="contacts">
+              <label class="form__contacts form__contacts--name" aria-label="Введите Ваше имя">
+                <input type="text" class="contacts-item__input" id="txt-name" placeholder="Ваше имя">
+              </label>
+              <label class="form__contacts form__contacts--telephone" aria-label="Введите Ваш телефон">
+                <input type="tel" class="contacts-item__input" id="txt-phone" placeholder="8(921)100-00-00">
+              </label>
+							<div class="form__checkbox flex-container">
+								<label class="check check-items" for="check-wa">
+									<input class="check__input" type="checkbox" value="Whatsapp" id="check-wa" aria-label="Связаться со мной по WhatsApp" checked>
+									<span class="check__box"></span>
+									WhatsApp
+								</label>
+								<label class="check check-items" for="check-vb">
+                  <input class="check__input" type="checkbox" value="Viber" id="check-vb" aria-label="Связаться со мной по Viber">
+									<span class="check__box"></span>
+									Viber
                 </label>
-              </div>
-              <div class="form-check form-group pl-0">
-                <label class="form-check-label" for="check-vb">
-                  <input class="form-check-input" type="checkbox" value="Viber" id="check-vb">
-                  Viber
-                  <span class="checkmark"></span>
-                </label>
-              </div>
-              <div class="form-check form-group pl-0">
-                <label class="form-check-label" for="check-tg">
-                  <input class="form-check-input" type="checkbox" value="Telegram" id="check-tg">
-                  Telegram
-                  <span class="checkmark"></span>
-                </label>
-              </div>
-              <div class="form-group">
-                <a id="btn-send-form" class="btn form-btn btn-light text-danger border-danger">
+								<label class="check check-items" for="check-tg">
+									<input class="check__input" type="checkbox" value="Telegram" id="check-tg" aria-label="Связаться со мной по Telegram">
+									<span class="check__box"></span>
+									Telegram
+								</label>
+							</div>
+              <div class="form__send">
+                <a id="btn-send-form" class="button-send">
                   <span id="btn-send-form-text">Отправить</span>
                   <object class="form-loader" type="image/svg+xml" data="image/spinner.svg"></object>
                 </a>
-
               </div>
-            </div>
-            <div class="container  col-md">
-              <img src="image/running-girl.jpg" class="card-img img-fluid" alt="Бегущая спортивная девушка на темном фоне">
-              <div class="card-img-overlay">
-                <blockquote class="blockquote text-justify p-3">
-                  <p class="mb-0">Побеждает в этой жизни только тот, кто победил сам себя. Кто победил свой страх, свою лень и свою неуверенность.</p>
-                  <footer class="blockquote-footer text-right  text-white">Виктор Суворов</footer>
-                </blockquote>
-              </div>
-            </div>
-          </div>
-        </div>
+        </form>
       </div>
     </section>
     <section id="questions" class="text-light bg-dark">
