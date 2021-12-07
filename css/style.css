@@ -94,18 +94,26 @@ header::before{
 
 .header-title__text-1{
   font-size: 36px;
-  font-family: "Raleway-Bold";
-}
-
-@media screen and (min-width: 462px) {
-  .wrapper-for-logo {
-    flex-direction: column;
-  }
 }
 
 @media screen and (min-width: 768px) {
   .header-title {
     text-align: center;
+  }
+  .header-title__text{
+    font-size: 36px;
+  }
+  .header-title__text-1{
+    font-size: 64px;
+  }
+  .slogan-light {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 474px) {
+  .row{
+    flex-direction: column;
   }
 }
 
@@ -342,10 +350,10 @@ input[type="text"], input[type="tel"] {
 }
 
 .flex-container {
-display: flex;
-flex-direction: row;
-align-items: center;
-padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
 }
 
 @media (max-device-width: 767px) {
@@ -437,6 +445,11 @@ padding-top: 20px;
   font-size: 18px;
 }
 
+@media screen and (min-width: 768px) {
+  .slogan-light {
+    font-size: 24px;
+  }
+}
 .section-header {
   position: relative;
   font-family: 'Raleway-Bold';
