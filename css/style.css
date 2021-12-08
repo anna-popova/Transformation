@@ -350,10 +350,10 @@ input[type="text"], input[type="tel"] {
 }
 
 .flex-container {
-display: flex;
-flex-direction: row;
-align-items: center;
-padding-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-top: 20px;
 }
 
 @media (max-device-width: 767px) {
@@ -445,6 +445,11 @@ padding-top: 20px;
   font-size: 18px;
 }
 
+@media screen and (min-width: 768px) {
+  .slogan-light {
+    font-size: 24px;
+  }
+}
 .section-header {
   position: relative;
   font-family: 'Raleway-Bold';
