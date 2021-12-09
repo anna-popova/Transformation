@@ -230,6 +230,13 @@ header::before{
   color: #c4c4c4;
 }
 
+.block-price__text--selected {
+  font-family: 'Raleway-Bold', sans-serif;
+  font-size: 36px;
+  line-height: 42px;
+  color: #444444;
+}
+
 @media (max-device-width: 760px) {
   .block-price__subtitle {
     font-size: 30px;
@@ -239,6 +246,11 @@ header::before{
   .block-price__text {
     font-size: 20px;
     line-height: 25px;
+  }
+
+  .block-price__text--selected {
+    font-size: 30px;
+    line-height: 36px;
   }
 }
 
@@ -251,6 +263,11 @@ header::before{
   .block-price__text {
     font-size: 18px;
     line-height: 21px;
+  }
+
+  .block-price__subtitle--selected {
+    font-size: 24px;
+    line-height: 28px;
   }
 }
 
