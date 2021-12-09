@@ -244,9 +244,9 @@
       <div class="container">
         <div class="block-price">
           <p class="block-price__subtitle">Стоимость участия</p>
-          <p class="block-price__text block-price__text--selected">До&nbsp;15&nbsp;декабря&nbsp;&mdash; 1000&nbsp;руб.</p>
-          <p class="block-price__text">До&nbsp;1&nbsp;января&nbsp;&mdash; 1500&nbsp;руб.</p>
-          <p class="block-price__text">Позже&nbsp;&mdash; 2000&nbsp;руб.</p>
+          <p id="text-price-1000" class="block-price__text">До&nbsp;15&nbsp;декабря&nbsp;&mdash; 1000&nbsp;руб.</p>
+          <p id="text-price-1500" class="block-price__text">До&nbsp;1&nbsp;января&nbsp;&mdash; 1500&nbsp;руб.</p>
+          <p id="text-price-2000" class="block-price__text">Позже&nbsp;&mdash; 2000&nbsp;руб.</p>
         </div>
       </div>
     </section>
@@ -435,6 +435,18 @@
             }
           });
         });
+      
+        // Выделяет актуальные цены 
+        let d = new Date();
+        if (d.getFullYear() === 2021 && d.getMonth() === 11 && d.getDate() < 15){
+          $("#text-price-1000").addClass('block-price__text--selected');
+        }
+        else if (d.getFullYear() === 2021 && d.getMonth() === 11 && d.getDate() >= 15){
+          $("#text-price-1500").addClass('block-price__text--selected');
+        }
+        else {
+          $("#text-price-2000").addClass('block-price__text--selected');
+        };
       });
     </script>
   </body>
