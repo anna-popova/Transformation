@@ -129,7 +129,7 @@
       </div>
     </section>
     <section id="programme">
-      <div class="container">
+      <div class="container-fluid">
         <h2 class="container pt-5 section-header">Программа</h2>
         <p class="container pt-4 pb-1 section-text">
           На протяжении трех недель будем говорить и действовать&#58;
@@ -147,6 +147,18 @@
         </div>
       </div>
     </section>
+    <section id="results">
+      <div class="container-fluid">
+        <h2 class="container pt-5 section-header">Результаты</h2>
+        <p class="container pt-4 pb-1 section-text">
+          Вместо фото «до» и «после» мы приглашаем Вас посмотреть на
+          образ жизни кураторов и участников в Инстаграм
+        </p>
+        <p class="container pt-3 pb-5 text-white text-center">
+          <a href="https://www.instagram.com/kldevents4friends/" class="btn btn-success">events4friends</a>
+        </p>
+      </div>
+    </section>
     <section class="container-results text-light m-0 p-0" id="tracklist">
       <div class="container">
         <h2 class="container pt-5 section-header">Трек-лист</h2>
@@ -157,17 +169,6 @@
         </ul>
       </div>
     </section>
-    <section id="results">
-      <div class="container-fluid container-results">
-        <h2 class="container pt-5 section-header">Результаты</h2>
-        <p class="container pt-3 text-white">
-          Вместо фото «до» и «после» мы приглашаем Вас посмотреть на
-          образ жизни кураторов и участников в Инстаграм
-        </p>
-        <p class="container pt-3 pb-5 text-white text-center">
-          <a href="https://www.instagram.com/kldevents4friends/" class="btn btn-success">events4friends</a>
-        </p>
-      </div>
 
       <!--    TODO: удалить блок-->
       <!--    <div class="container-fluid container-results">
@@ -273,14 +274,13 @@
         </picture>
       </div>
     </div> -->
-    </section>
     <section id="price">
       <div class="container">
         <div class="block-price">
           <p class="block-price__subtitle">Стоимость участия</p>
-          <p class="block-price__text block-price__text--selected">До&nbsp;15&nbsp;декабря&nbsp;&mdash; 1000&nbsp;руб.</p>
-          <p class="block-price__text">До&nbsp;1&nbsp;января&nbsp;&mdash; 1500&nbsp;руб.</p>
-          <p class="block-price__text">Позже&nbsp;&mdash; 2000&nbsp;руб.</p>
+          <p id="text-price-1000" class="block-price__text">До&nbsp;15&nbsp;декабря&nbsp;&mdash; 1000&nbsp;руб.</p>
+          <p id="text-price-1500" class="block-price__text">До&nbsp;1&nbsp;января&nbsp;&mdash; 1500&nbsp;руб.</p>
+          <p id="text-price-2000" class="block-price__text">Позже&nbsp;&mdash; 2000&nbsp;руб.</p>
         </div>
       </div>
     </section>
@@ -469,6 +469,17 @@
             }
           });
         });
+        // Выделяет актуальные цены 
+        let d = new Date();
+        if (d.getFullYear() === 2021 && d.getMonth() === 11 && d.getDate() < 15){
+          $("#text-price-1000").addClass('block-price__text--selected');
+        }
+        else if (d.getFullYear() === 2021 && d.getMonth() === 11 && d.getDate() >= 15){
+          $("#text-price-1500").addClass('block-price__text--selected');
+        }
+        else {
+          $("#text-price-2000").addClass('block-price__text--selected');
+        };
       });
     </script>
   </body>
