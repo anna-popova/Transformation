@@ -174,19 +174,20 @@ header::before{
 }
 
 .faq-list__question {
-  font-weight: bold;
+	font-weight: bold;
   list-style-position: outside;
   text-transform: uppercase;
   padding-top: 1rem;
   padding-left: .5rem;
   margin-left: .5rem;
+	z-index: 1;
 }
 
 .faq-list__answer {
   font-family: 'Roboto';
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.2em;
+	line-height: 1.2em;
   text-transform: none;
 }
 
@@ -630,12 +631,6 @@ input[type="text"], input[type="tel"] {
     padding-top: 20px;
   }
 }
-
-/*@media screen and (min-width: px) {
-  .list__group-icon:nth-child(2), .list__group-icon:nth-child(3) {
-    padding-top: 20px;
-  }
-}*/
 
 @media screen and (min-width: 768px) {
   .list__group-icon:nth-child(1),
