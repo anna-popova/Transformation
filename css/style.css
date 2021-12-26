@@ -400,6 +400,7 @@ input[type="text"], input[type="tel"] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	visibility: hidden;
 	position: absolute;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -575,7 +576,7 @@ input[type="text"], input[type="tel"] {
     margin-bottom: 48px;
   }
   .section-header::after {
-    left: 15px; 
+    left: 15px;
   }
   .about-project__text-2 {
     margin-top: 69px;
@@ -638,8 +639,8 @@ input[type="text"], input[type="tel"] {
 
 @media screen and (min-width: 768px) {
   .list__group-icon:nth-child(1),
-  .list__group-icon:nth-child(2), 
-  .list__group-icon:nth-child(3), 
+  .list__group-icon:nth-child(2),
+  .list__group-icon:nth-child(3),
   .list__group-icon:nth-child(4) {
     padding-top: 18px;
   }
@@ -647,8 +648,8 @@ input[type="text"], input[type="tel"] {
 
 @media screen and (min-width: 1200px) {
   .list__group-icon:nth-child(1),
-  .list__group-icon:nth-child(2), 
-  .list__group-icon:nth-child(3), 
+  .list__group-icon:nth-child(2),
+  .list__group-icon:nth-child(3),
   .list__group-icon:nth-child(4) {
     padding-top: 18px;
   }
