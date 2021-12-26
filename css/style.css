@@ -401,6 +401,7 @@ input[type="text"], input[type="tel"] {
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
+	visibility: hidden;
 	position: absolute;
 	-webkit-user-select: none;
 	-moz-user-select: none;
@@ -703,8 +704,3 @@ input[type="text"], input[type="tel"] {
     padding: 12px 55px;
   }
 }
-
-
-
-
-
