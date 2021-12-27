@@ -147,7 +147,7 @@ header::before{
   }
 }
 
-#go-top {
+.btn--go-top{
   display: none;
   position: fixed;
   bottom: 20px;
@@ -180,7 +180,6 @@ header::before{
   padding-top: 1rem;
   padding-left: .5rem;
   margin-left: .5rem;
-	z-index: 1;
 }
 
 .faq-list__answer {
@@ -585,7 +584,7 @@ input[type="text"], input[type="tel"] {
   }
 }
 
-#programme {
+.section-programme {
   margin-top: 58px;
 }
 
@@ -648,7 +647,7 @@ input[type="text"], input[type="tel"] {
   .list__group-icon:nth-child(4) {
     padding-top: 18px;
   }
-  #programme {
+  .section-programme {
     margin-top: 125px;
   }
   .list-group {
@@ -667,7 +666,7 @@ input[type="text"], input[type="tel"] {
   }
 }
 
-#results {
+.section-results {
   margin-top: 58px;
 }
 
@@ -676,7 +675,7 @@ input[type="text"], input[type="tel"] {
 }
 
 @media screen and (min-width: 1200px) {
-  #results {
+  .section-results {
     margin-top: 113px;
   }
 }
