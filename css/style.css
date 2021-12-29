@@ -707,11 +707,13 @@ input[type="text"], input[type="tel"] {
 
 .section-questions {
 	background-image: url(../image/questions-bg.png);
+	background-repeat: no-repeat;
 }
 
 .questions__header {
 	color: #fff;
 	text-align: center;
+
 }
 
 .questions__header::after {
