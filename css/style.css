@@ -708,12 +708,12 @@ input[type="text"], input[type="tel"] {
 .section-questions {
 	background-image: url(../image/questions-bg.png);
 	background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .questions__header {
 	color: #fff;
 	text-align: center;
-
 }
 
 .questions__header::after {
