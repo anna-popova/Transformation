@@ -171,6 +171,7 @@ header::before{
   font-family: "Roboto";
   font-size: 16px;
   line-height: 1.2em;
+	list-style: none;
 }
 
 .faq-list__question {
@@ -702,4 +703,21 @@ input[type="text"], input[type="tel"] {
   .btn {
     padding: 12px 55px;
   }
+}
+
+.section-questions {
+	background-image: url(../image/questions-bg.png);
+}
+
+.questions__header {
+	color: #fff;
+	text-align: center;
+}
+
+.questions__header::after {
+	content: none;
+}
+
+.color-light {
+	color: #fff;
 }
