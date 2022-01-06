@@ -788,3 +788,12 @@ input[type="text"], input[type="tel"] {
 		width: 500px;
 	}
 }
+
+/*
+	Данный класс немного выравнивает текст в темных кнопках.
+	Он назван как атрибут, но это тоже неверно, потому что класс btn-dark находится в библиотеке bootstrap
+	TODO: перенести все стили кнопки в style.css и избавиться от bootstrap
+*/
+.btn-dark--position {
+	padding: 4px 24px;
+}
