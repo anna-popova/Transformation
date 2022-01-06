@@ -159,8 +159,13 @@
     </section>
     <section class="container-results text-light m-0 p-0" id="tracklist">
       <div class="container">
-        <h2 class="container pt-5 section-header">Трек-лист</h2>
-        <p class="pt-3 pb-3">Мы разработали для Вас треклист. Просто скачайте его, распечатайте и повесьте на холодильник. Отмечайте Ваш прогресс каждый день.</p>
+				<!--
+					По методологии БЭМ у нас тут ошибка:
+					нельзя использовать класс эелента questions__header вне блока
+					TODO: исправить это позже, спроектировать другое название и переиспользовать в двух местах
+				-->
+        <h2 class="container pt-5 section-header questions__header">Трек-лист</h2>
+        <p class="pt-3 pb-3 section-text">Мы разработали для Вас треклист. Просто скачайте его, распечатайте и повесьте на холодильник. Отмечайте Ваш прогресс каждый день.</p>
         <ul class="d-flex justify-content-center list-unstyled pb-5 m-0 list-for-load">
           <li class="nav-item mr-5"><a class="btn form-btn btn-dark" href="https://drive.google.com/file/d/1bsonpiHRlncX5x1KYousnukzfz46Wafu"><img src="image/google-icon.svg" alt="google-icon" width="20" height="20"> ч/б </a></li>
           <li class="nav-item"><a class="btn form-btn btn-dark" href="https://drive.google.com/file/d/1G53ABdGHIsx-VeQfAJW9i34Qd-qCGj58"><img src="image/google-icon.svg" alt="google-icon" width="20" height="20"> цвет </a></li>
