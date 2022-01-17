@@ -789,11 +789,105 @@ input[type="text"], input[type="tel"] {
 	}
 }
 
-/*
-	Данный класс немного выравнивает текст в темных кнопках.
-	Он назван как атрибут, но это тоже неверно, потому что класс btn-dark находится в библиотеке bootstrap
-	TODO: перенести все стили кнопки в style.css и избавиться от bootstrap
-*/
-.btn-dark--position {
-	padding: 4px 24px;
+.section-tracklist {
+	background-image: url(../image/questions-bg.png);
+	background-size: 100% 100%;
+	margin-top: 75px;
+	padding-top: 54px;
+	padding-bottom: 50px;
+}
+
+.tracklist-container{
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: 80%;
+	margin: 0 auto 33px;
+	padding: 0 70px;
+	background-color: rgba(0, 0, 0, 0.39);
+}
+
+.tracklist__header {
+	color: #fff;
+	text-align: center;
+	margin-bottom: 26px;
+}
+
+.tracklist__header::after {
+	content: none;
+}
+
+.tracklist-list {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+}
+
+.tracklist-list__item {
+	margin-right: 94px;
+}
+
+.tracklist-list__item--last{
+	margin-right: 0;
+}
+
+@media screen and (min-width: 1200px) {
+	.tracklist__header {
+		margin-bottom: 36px;
+	}
+	.section-tracklist {
+		padding-top: 37px;
+		padding-bottom: 63px;
+	}
+}
+
+@media screen and (min-width: 1280px) {
+	.section-tracklist {
+		background-image: url(../image/questions-bg-desktop.png);
+		background-size: 100% 100%;
+	}
+}
+
+@media screen and (max-width: 500px) {
+	.tracklist-container{
+		width: 90%;
+		padding: 0 10px;
+	}
+
+	.tracklist-list__item {
+		margin-right: 20px;
+	}
+}
+
+.button-red {
+	width: 174px;
+  padding: 12px 15px;
+  background-color: var(--basic-red);
+  border: 1px solid var(--basic-red);
+	color: #ffffff;
+  box-sizing: border-box;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+	position: relative;
+}
+
+.button-red:hover {
+  transition: all 0.3s;
+  opacity: 80%;
+}
+
+.button-red span {
+	font-family: 'Raleway-Bold';
+	text-transform: uppercase;
+  font-size: 22px;
+  line-height: 26px;
+	color: var(--basic-white);
+}
+
+@media screen and (max-width: 500px) {
+	.button-red {
+		width: 120px;
+		padding: 2px 9px;
+	}
 }
