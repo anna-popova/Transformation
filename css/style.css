@@ -60,7 +60,6 @@ body {
 
 img {
   max-width: 100%;
-  height: auto;
 }
 
 header {
@@ -452,15 +451,12 @@ input[type="text"], input[type="tel"] {
 		border: 1px solid var(--basic-red);
 	}
 
-.form-btn {
+/*.form-btn {
   position: relative;
-  width: 150px;
-  height: 40px;
-  text-align: center;
   white-space: nowrap;
   font-size: 1rem;
   line-height: 1.5;
-}
+}*/
 
 .form-loader {
   width: 80px;
@@ -721,20 +717,20 @@ input[type="text"], input[type="tel"] {
 	height: 4px;
 }
 
-.section-questions {
+.section-tf {
 	background-image: url(../image/questions-bg.png);
 	background-size: 100% 100%;
 	padding-top: 54px;
 	padding-bottom: 50px;
 }
 
-.questions__header {
+.header-center {
 	color: #fff;
 	text-align: center;
 	margin-bottom: 26px;
 }
 
-.questions__header::after {
+.header-center::after {
 	content: none;
 }
 
@@ -758,10 +754,10 @@ input[type="text"], input[type="tel"] {
 		line-height: 34px;
 		margin-top: 6px;
 	}
-	.questions__header {
+	.header-center {
 		margin-bottom: 36px;
 	}
-	.section-questions {
+	.section-tf {
 		padding-top: 37px;
 		padding-bottom: 63px;
 	}
@@ -774,7 +770,7 @@ input[type="text"], input[type="tel"] {
 }
 
 @media screen and (min-width: 1280px) {
-	.section-questions {
+	.section-tf {
 		background-image: url(../image/questions-bg-desktop.png);
 		background-size: 100% 100%;
 	}
@@ -794,6 +790,102 @@ input[type="text"], input[type="tel"] {
 	Он назван как атрибут, но это тоже неверно, потому что класс btn-dark находится в библиотеке bootstrap
 	TODO: перенести все стили кнопки в style.css и избавиться от bootstrap
 */
-.btn-dark--position {
+/*.btn-dark--position {
 	padding: 4px 24px;
+}*/
+
+.section-track {
+	background-image: url(../image/track-list.png);
+	margin-top: 42px;
+}
+
+.track {
+	width: 93%;
+	background-color: rgba(0, 0, 0, 0.39);
+	margin-left: 7px;
+	padding: 22px 15px 1px 15px;
+	margin-top: -23px;
+	margin-bottom: 28px;
+
+}
+
+.track__text {
+	text-align: center;
+}
+
+.text-btn {
+	font-family: 'Raleway-Bold';
+  font-size: 22px;
+  text-transform: uppercase;
+	color: #fff;
+	display: flex;
+	margin-left: 0;
+
+}
+
+.icon-btn {
+	margin-right: 8px;
+}
+.track__item {
+	width: 120px;
+	height: 40px;
+	background: #EE3625;
+	border-radius: 5px;
+	padding: 7px 9px;
+	margin-left: 20px;
+}
+
+.track__btn {
+	display: flex;
+	margin-bottom: -10px;
+}
+
+@media screen and (min-width: 320px) {
+	.track__btn {
+		justify-content: center;
+	}
+}
+
+@media screen and (min-width: 520px) {
+	.section-track {
+		background: url(../image/track-bg-desktop.png);
+		background-size: 100% 100%;
+	}
+	.track__item {
+		margin-left: 94px;
+	}
+	.track__btn {
+		margin-bottom: -13px;
+		justify-content: center;
+		padding-left: 20px;
+		margin-left: -100px;
+	}
+}
+
+@media screen and (min-width: 1200px) {
+	.section-track {
+		background: url(../image/track-bg-desktop.png);
+		background-size: 100% 100%;
+		margin-top: 65px;
+	}
+	.track {
+		width: 874px;
+		margin: 0 auto;
+		margin-top: -3px;
+		padding: 19px 47px;
+		margin-bottom: 33px;
+	}
+	.track__item {
+		width: 174px;
+		height: 60px;
+	}
+	.icon-btn {
+		width: 35px;
+		height: 30px;
+		margin-right: 25px;
+	}
+	.text-btn {
+		align-items: center;
+		margin: 7px;
+	}
 }
