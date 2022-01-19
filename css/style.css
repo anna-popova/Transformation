@@ -500,7 +500,7 @@ input[type="text"], input[type="tel"] {
   font-size: 18px;
 }
 
-.container {
+.container__default {
   padding-right: 5px;
 }
 
@@ -538,11 +538,11 @@ input[type="text"], input[type="tel"] {
   margin-top: 12px;
 }
 
-.bl{
+.font__raleway-bold {
   font-family: 'Raleway-Bold';
 }
 
-.lh-1{
+.line__heigth-1 {
   line-height: 21.13px;
 }
 
@@ -554,7 +554,7 @@ input[type="text"], input[type="tel"] {
 }
 
 @media screen and (min-width: 1200px) {
-  .container {
+  .container__default {
     padding-left: 15px;
     padding-right: 30px;
   }
