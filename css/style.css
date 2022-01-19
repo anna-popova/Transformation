@@ -515,35 +515,77 @@ input[type="text"], input[type="tel"] {
   margin-bottom: 25px;
 }
 
-.about-project__blocks-yoga {
+/* Блок information-card - карточка с информацией */
+
+.information-card {
   width: 280px;
   border-radius: 10px;
   text-align: center;
   height: 350px;
   box-shadow: 0 5px 90px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-.about-project__blocks-yoga + .about-project__blocks-yoga {
+.information-card + .information-card {
   margin-top: 20px;
 }
 
-.about-project__blocks-yoga__img {
+.information-card__image-wrap {
   text-align: center;
   margin-top: 15px;
+  box-sizing: border-box;
 }
 
-.about-project__blocks-yoga__text {
+.information-card__text-wrap {
   width: 246px;
   margin: 0 auto;
   margin-top: 12px;
+  box-sizing: border-box;
 }
 
-.font__raleway-bold {
+.information-card__title {
   font-family: 'Raleway-Bold';
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 
-.line__heigth-1 {
-  line-height: 21.13px;
+.information-card__description {
+  line-height: 21px;
+  font-family: 'Raleway-Regular';
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 1200px) {
+  .information-card {
+    width: 530px;
+    min-height: 387px;
+  }
+
+  .information-card + .information-card {
+    margin-left: 20px;
+    margin-top: 0;
+  }
+
+  .information-card__text-wrap {
+    width: 444px;
+    margin-top: 22px;
+  }
+
+  .information-card__title {
+    padding-bottom: 10px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .information-card__description {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 @media screen and (min-width: 560px) {
@@ -561,21 +603,7 @@ input[type="text"], input[type="tel"] {
   .about-project__blocks {
     flex-direction: row;
   }
-  .about-project__blocks-yoga {
-    width: 530px;
-    min-height: 387px;
-  }
-  .about-project__blocks-yoga__text {
-    width: 444px;
-    margin-top: 22px;
-  }
-  .about-project__blocks-yoga__text-cap {
-    padding-bottom: 10px;
-  }
-  .about-project__blocks-yoga + .about-project__blocks-yoga {
-    margin-left: 20px;
-    margin-top: 0;
-  }
+
   .section-text {
     font-size: 24px;
     line-height: 28.18px;
