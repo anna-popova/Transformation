@@ -570,7 +570,7 @@ input[type="text"], input[type="tel"] {
 @media screen and (min-width: 1200px) {
   .about__text {
     font-size: 24px;
-    line-height: 28.18px;
+    line-height: 28px;
   }
 }
 
@@ -682,7 +682,7 @@ input[type="text"], input[type="tel"] {
 @media screen and (min-width: 1200px) {
   .section-text {
     font-size: 24px;
-    line-height: 28.18px;
+    line-height: 28px;
   }
   .section-header {
     margin-bottom: 48px;
