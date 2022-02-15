@@ -500,95 +500,195 @@ input[type="text"], input[type="tel"] {
   font-size: 18px;
 }
 
-.container__default {
-  padding-right: 5px;
+
+/* Блок about - Раздел сайта "О проекте" */
+
+.about {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-.about-project__blocks {
+@media (min-width: 576px) {
+  .about {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .about {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .about {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .about {
+    max-width: 1140px;
+  }
+}
+
+.about__header {
+  position: relative;
+  font-family: 'Raleway-Bold';
+  font-size: 36px;
+  color: #444444;
+  margin-bottom: 31px;
+}
+
+.about__header::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #EE3625;
+  left: 20px;
+  bottom: -10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .about__header {
+    margin-bottom: 48px;
+  }
+  .about__header::after {
+    left: 15px;
+  }
+}
+
+.about__text {
+  font-family: 'Raleway-Regular';
+  font-size: 18px;
+}
+
+@media screen and (min-width: 1200px) {
+  .about__text {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+.about__text--space {
+  margin-top: 37px;
+  margin-bottom: 25px;
+}
+
+@media screen and (min-width: 1200px) {
+  .about__text--space {
+    margin-top: 69px;
+    margin-bottom: 69px;
+  }
+}
+
+.about__cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.about-project__text-2 {
-  margin-top: 37px;
-  margin-bottom: 25px;
+@media screen and (min-width: 768px) {
+  .about__cards {
+    align-items: center;
+    flex-direction: row;
+  }
 }
 
-.about-project__blocks-yoga {
-  width: 280px;
+
+/* Блок information-card - карточка с информацией */
+
+.information-card {
+  width: 100%;
+  max-width: 320px;
+  min-width: 280px;
   border-radius: 10px;
   text-align: center;
   height: 350px;
   box-shadow: 0 5px 90px 0 rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
 }
 
-.about-project__blocks-yoga + .about-project__blocks-yoga {
-  margin-top: 20px;
+.information-card:not(:last-child) {
+  margin-right: 0;
+  margin-bottom: 20px;
 }
 
-.about-project__blocks-yoga__img {
+@media (min-width: 768px) {
+  .information-card:not(:last-child) {
+    margin-bottom: 0;
+    margin-right: 20px;
+  }
+}
+
+.information-card__image-wrap {
   text-align: center;
   margin-top: 15px;
+  box-sizing: border-box;
 }
 
-.about-project__blocks-yoga__text {
+.information-card__text-wrap {
   width: 246px;
   margin: 0 auto;
   margin-top: 12px;
+  box-sizing: border-box;
 }
 
-.font__raleway-bold {
+.information-card__title {
   font-family: 'Raleway-Bold';
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 
-.line__heigth-1 {
-  line-height: 21.13px;
+.information-card__description {
+  line-height: 21px;
+  font-family: 'Raleway-Regular';
+  font-size: 18px;
+  margin-top: 0;
+  margin-bottom: 1rem;
+  box-sizing: border-box;
 }
 
-@media screen and (min-width: 560px) {
-  .about-project__blocks {
-    flex-direction: column;
-    align-items: center;
+@media screen and (min-width: 1200px) {
+  .information-card {
+    width: 530px;
+    max-width: 530px;
+    min-height: 387px;
+  }
+
+  .information-card__text-wrap {
+    width: 444px;
+    margin-top: 22px;
+  }
+
+  .information-card__title {
+    padding-bottom: 10px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+
+  .information-card__description {
+    font-size: 24px;
+    line-height: 28px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .container__default {
-    padding-left: 15px;
-    padding-right: 30px;
-  }
-  .about-project__blocks {
-    flex-direction: row;
-  }
-  .about-project__blocks-yoga {
-    width: 530px;
-    min-height: 387px;
-  }
-  .about-project__blocks-yoga__text {
-    width: 444px;
-    margin-top: 22px;
-  }
-  .about-project__blocks-yoga__text-cap {
-    padding-bottom: 10px;
-  }
-  .about-project__blocks-yoga + .about-project__blocks-yoga {
-    margin-left: 20px;
-    margin-top: 0;
-  }
   .section-text {
     font-size: 24px;
-    line-height: 28.18px;
+    line-height: 28px;
   }
   .section-header {
     margin-bottom: 48px;
   }
   .section-header::after {
     left: 15px;
-  }
-  .about-project__text-2 {
-    margin-top: 69px;
-    margin-bottom: 69px;
   }
 }
 
