@@ -774,6 +774,46 @@ input[type="text"], input[type="tel"] {
   }
 }
 
+/* блок Список вебинаров */
+
+.programme__webinars {
+  margin-top: 50px;
+}
+.webinars__title {
+  margin-bottom: 47px;
+  font-family: 'Raleway-Bold';
+  color: #444444;
+}
+.webinars-list {
+  padding-left: 60px;
+}
+.webinars-item {
+  position: relative;
+  margin-bottom: 25px;
+  list-style-type: none;
+}
+@media screen and (min-width: 768px) {
+  .webinars-item {
+    margin-bottom: 35px;
+  }
+}
+.webinars-item:last-child {
+  margin-bottom: 0;
+}
+.webinars-item::before {
+  content: "";
+  position: absolute;
+  left: -35px;
+  top: 7px;
+  display: block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #ec3625;
+}
+
+/* секция Результаты */
+
 .section-results {
   margin-top: 58px;
 }
