@@ -495,9 +495,24 @@ input[type="text"], input[type="tel"] {
   bottom: -10px;
 }
 
+@media screen and (min-width: 1200px) {
+  .section-header {
+    margin-bottom: 48px;
+  }
+  .section-header::after {
+    left: 15px;
+  }
+}
+
 .section-text {
   font-family: 'Raleway-Regular';
   font-size: 18px;
+}
+@media screen and (min-width: 1200px) {
+  .section-text {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
 
@@ -679,29 +694,103 @@ input[type="text"], input[type="tel"] {
   }
 }
 
+
+/* Блок programme - Раздел сайта "Программа" */
+
+.programme {
+  margin-top: 58px;
+}
 @media screen and (min-width: 1200px) {
-  .section-text {
-    font-size: 24px;
-    line-height: 28px;
+  .programme {
+    margin-top: 125px;
   }
-  .section-header {
+}
+.programme__container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+@media (min-width: 576px) {
+  .programme__container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .programme__container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .programme__container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .programme__container {
+    max-width: 1140px;
+  }
+}
+.programme__header {
+  position: relative;
+  font-family: 'Raleway-Bold';
+  font-size: 36px;
+  color: #444444;
+  margin-bottom: 31px;
+}
+.programme__header::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #EE3625;
+  left: 20px;
+  bottom: -10px;
+}
+@media screen and (min-width: 1200px) {
+  .programme__header {
     margin-bottom: 48px;
   }
-  .section-header::after {
+  .programme__header::after {
     left: 15px;
   }
 }
-
-.section-programme {
-  margin-top: 58px;
+.programme__text {
+  font-family: 'Raleway-Regular';
+  font-size: 18px;
+}
+@media screen and (min-width: 1200px) {
+  .programme__text {
+    font-size: 24px;
+    line-height: 28px;
+  }
 }
 
-.list-group {
-  padding-left: 16px;
+
+/* блок rules - Раздел сайта "Программа" */
+
+@media screen and (min-width: 1200px) {
+  .rules {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.rules__list {
+  display: flex;
+  flex-direction: column;
   margin-top: 26px;
+  margin-bottom: 0;
+  padding-left: 16px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
 }
-
-.list__group-icon {
+@media screen and (min-width: 1200px) {
+  .rules__list {
+    margin-top: 8px;
+  }
+}
+.rules__item {
   list-style: none;
   background-image: url(../image/programme__icon.svg);
   background-repeat: no-repeat;
@@ -709,72 +798,60 @@ input[type="text"], input[type="tel"] {
   padding-left: 54px;
   height: 60px;
   margin-top: 20px;
+  font-family: 'Raleway-Regular';
 }
-
-.list__group-icon:nth-child(2) {
+.rules__item:nth-child(2) {
   padding-top: 10px;
 }
-
-.list__group-icon:nth-child(3) {
+.rules__item:nth-child(3) {
   padding-top: 0;
 }
-
-.list__group-icon:nth-child(4) {
+.rules__item:nth-child(4) {
   padding-top: 10px;
 }
-
-.programme__content-img {
-  display: none;
-}
-
 @media screen and (min-width: 350px) {
-  .list__group-icon:nth-child(1){
+  .rules__item:nth-child(1){
     padding-top: 15px;
   }
 }
-
 @media screen and (min-width: 363px) {
-  .list__group-icon:nth-child(2), .list__group-icon:nth-child(3), .list__group-icon:nth-child(4){
+  .rules__item:nth-child(2), .rules__item:nth-child(3), .rules__item:nth-child(4){
     padding-top: 20px;
   }
 }
-
 @media screen and (min-width: 768px) {
-  .list__group-icon:nth-child(1),
-  .list__group-icon:nth-child(2),
-  .list__group-icon:nth-child(3),
-  .list__group-icon:nth-child(4) {
+  .rules__item:nth-child(1),
+  .rules__item:nth-child(2),
+  .rules__item:nth-child(3),
+  .rules__item:nth-child(4) {
     padding-top: 18px;
   }
 }
-
 @media screen and (min-width: 1200px) {
-  .list__group-icon:nth-child(1),
-  .list__group-icon:nth-child(2),
-  .list__group-icon:nth-child(3),
-  .list__group-icon:nth-child(4) {
+  .rules__item:nth-child(1),
+  .rules__item:nth-child(2),
+  .rules__item:nth-child(3),
+  .rules__item:nth-child(4) {
     padding-top: 18px;
   }
-  .section-programme {
-    margin-top: 125px;
-  }
-  .list-group {
-    margin-top: 8px;
-  }
-  .list__group-icon {
+  .rules__item {
     margin-bottom: -12px;
+    font-size: 24px;
+    line-height: 28px;
   }
-  .programme__content {
-    display: flex;
-    justify-content: space-between;
-  }
-  .programme__content-img {
+}
+.rules__img-block {
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .rules__img-block {
     display: block;
     margin-top: -130px;
   }
 }
 
-/* блок Список вебинаров */
+
+/* блок Список вебинаров - Раздел сайта "Программа" */
 
 .programme__webinars {
   margin-top: 50px;
@@ -784,23 +861,30 @@ input[type="text"], input[type="tel"] {
   font-family: 'Raleway-Bold';
   color: #444444;
 }
-.webinars-list {
+.webinars__list {
   padding-left: 60px;
 }
-.webinars-item {
+.webinars__item {
   position: relative;
   margin-bottom: 25px;
   list-style-type: none;
+  font-family: 'Raleway-Regular';
 }
 @media screen and (min-width: 768px) {
-  .webinars-item {
+  .webinars__item {
     margin-bottom: 35px;
   }
 }
-.webinars-item:last-child {
+@media screen and (min-width: 1200px) {
+  .webinars__item {
+    font-size: 24px;
+    line-height: 28px;
+}
+}
+.webinars__item:last-child {
   margin-bottom: 0;
 }
-.webinars-item::before {
+.webinars__item::before {
   content: "";
   position: absolute;
   left: -35px;
@@ -811,6 +895,7 @@ input[type="text"], input[type="tel"] {
   border-radius: 50%;
   background-color: #ec3625;
 }
+
 
 /* секция Результаты */
 
