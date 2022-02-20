@@ -526,6 +526,13 @@ input[type="text"], input[type="tel"] {
   margin-left: auto;
 }
 
+@media (max-width: 575px) {
+  .about {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
 @media (min-width: 576px) {
   .about {
     max-width: 540px;
@@ -700,11 +707,13 @@ input[type="text"], input[type="tel"] {
 .programme {
   margin-top: 58px;
 }
+
 @media screen and (min-width: 1200px) {
   .programme {
     margin-top: 125px;
   }
 }
+
 .programme__container {
   width: 100%;
   padding-right: 15px;
@@ -712,26 +721,38 @@ input[type="text"], input[type="tel"] {
   margin-right: auto;
   margin-left: auto;
 }
+
+@media (max-width: 575px) {
+  .programme__container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
 @media (min-width: 576px) {
   .programme__container {
     max-width: 540px;
   }
 }
+
 @media (min-width: 768px) {
   .programme__container {
     max-width: 720px;
   }
 }
+
 @media (min-width: 992px) {
   .programme__container {
     max-width: 960px;
   }
 }
+
 @media (min-width: 1200px) {
   .programme__container {
     max-width: 1140px;
   }
 }
+
 .programme__header {
   position: relative;
   font-family: 'Raleway-Bold';
@@ -739,6 +760,7 @@ input[type="text"], input[type="tel"] {
   color: #444444;
   margin-bottom: 31px;
 }
+
 .programme__header::after {
   content: "";
   position: absolute;
@@ -748,23 +770,31 @@ input[type="text"], input[type="tel"] {
   left: 20px;
   bottom: -10px;
 }
+
 @media screen and (min-width: 1200px) {
   .programme__header {
     margin-bottom: 48px;
   }
+
   .programme__header::after {
     left: 15px;
   }
 }
+
 .programme__text {
   font-family: 'Raleway-Regular';
   font-size: 18px;
 }
+
 @media screen and (min-width: 1200px) {
   .programme__text {
     font-size: 24px;
     line-height: 28px;
   }
+}
+
+.programme__webinars {
+  margin-top: 50px;
 }
 
 
@@ -776,6 +806,7 @@ input[type="text"], input[type="tel"] {
     justify-content: space-between;
   }
 }
+
 .rules__list {
   display: flex;
   flex-direction: column;
@@ -785,11 +816,19 @@ input[type="text"], input[type="tel"] {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
 }
+
+@media (max-width: 575px) {
+  .rules__list {
+    padding-left: 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .rules__list {
     margin-top: 8px;
   }
 }
+
 .rules__item {
   list-style: none;
   background-image: url(../image/programme__icon.svg);
@@ -800,25 +839,31 @@ input[type="text"], input[type="tel"] {
   margin-top: 20px;
   font-family: 'Raleway-Regular';
 }
+
 .rules__item:nth-child(2) {
   padding-top: 10px;
 }
+
 .rules__item:nth-child(3) {
   padding-top: 0;
 }
+
 .rules__item:nth-child(4) {
   padding-top: 10px;
 }
+
 @media screen and (min-width: 350px) {
   .rules__item:nth-child(1){
     padding-top: 15px;
   }
 }
+
 @media screen and (min-width: 363px) {
   .rules__item:nth-child(2), .rules__item:nth-child(3), .rules__item:nth-child(4){
     padding-top: 20px;
   }
 }
+
 @media screen and (min-width: 768px) {
   .rules__item:nth-child(1),
   .rules__item:nth-child(2),
@@ -827,6 +872,7 @@ input[type="text"], input[type="tel"] {
     padding-top: 18px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .rules__item:nth-child(1),
   .rules__item:nth-child(2),
@@ -834,15 +880,18 @@ input[type="text"], input[type="tel"] {
   .rules__item:nth-child(4) {
     padding-top: 18px;
   }
+
   .rules__item {
     margin-bottom: -12px;
     font-size: 24px;
     line-height: 28px;
   }
 }
+
 .rules__img-block {
   display: none;
 }
+
 @media screen and (min-width: 1200px) {
   .rules__img-block {
     display: block;
@@ -853,17 +902,22 @@ input[type="text"], input[type="tel"] {
 
 /* блок Список вебинаров - Раздел сайта "Программа" */
 
-.programme__webinars {
-  margin-top: 50px;
-}
 .webinars__title {
   margin-bottom: 47px;
   font-family: 'Raleway-Bold';
   color: #444444;
 }
+
 .webinars__list {
   padding-left: 60px;
 }
+
+@media (max-width: 767px) {
+  .webinars__list {
+    padding-left: 35px;
+  }
+}
+
 .webinars__item {
   position: relative;
   margin-bottom: 25px;
@@ -875,15 +929,18 @@ input[type="text"], input[type="tel"] {
     margin-bottom: 35px;
   }
 }
+
 @media screen and (min-width: 1200px) {
   .webinars__item {
     font-size: 24px;
     line-height: 28px;
+  }
 }
-}
+
 .webinars__item:last-child {
   margin-bottom: 0;
 }
+
 .webinars__item::before {
   content: "";
   position: absolute;
