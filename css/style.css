@@ -526,6 +526,13 @@ input[type="text"], input[type="tel"] {
   margin-left: auto;
 }
 
+@media (max-width: 575px) {
+  .about {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
 @media (min-width: 576px) {
   .about {
     max-width: 540px;
@@ -715,6 +722,13 @@ input[type="text"], input[type="tel"] {
   margin-left: auto;
 }
 
+@media (max-width: 575px) {
+  .programme__container {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
 @media (min-width: 576px) {
   .programme__container {
     max-width: 540px;
@@ -801,6 +815,12 @@ input[type="text"], input[type="tel"] {
   padding-left: 16px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+}
+
+@media (max-width: 575px) {
+  .rules__list {
+    padding-left: 0;
+  }
 }
 
 @media screen and (min-width: 1200px) {
@@ -890,6 +910,12 @@ input[type="text"], input[type="tel"] {
 
 .webinars__list {
   padding-left: 60px;
+}
+
+@media (max-width: 767px) {
+  .webinars__list {
+    padding-left: 35px;
+  }
 }
 
 .webinars__item {
