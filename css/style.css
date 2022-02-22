@@ -516,9 +516,9 @@ input[type="text"], input[type="tel"] {
 }
 
 
-/* Блок news - Раздел сайта "Новости" */
+/* Общие стили */
 
-.news {
+.section {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
@@ -528,38 +528,38 @@ input[type="text"], input[type="tel"] {
 }
 
 @media (max-width: 575px) {
-  .news {
+  .section {
     padding-right: 30px;
     padding-left: 30px;
   }
 }
 
 @media (min-width: 576px) {
-  .news {
+  .section {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .news {
+  .section {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .news {
+  .section {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .news {
+  .section {
     max-width: 1140px;
     margin-top: 80px;
   }
 }
 
-.news__header {
+.section__header {
   position: relative;
   font-family: 'Raleway-Bold';
   font-size: 36px;
@@ -567,7 +567,7 @@ input[type="text"], input[type="tel"] {
   margin-bottom: 31px;
 }
 
-.news__header::after {
+.section__header::after {
   content: "";
   position: absolute;
   width: 100px;
@@ -578,107 +578,27 @@ input[type="text"], input[type="tel"] {
 }
 
 @media screen and (min-width: 1200px) {
-  .news__header {
+  .section__header {
     margin-bottom: 48px;
   }
-  .news__header::after {
+  .section__header::after {
     left: 15px;
   }
 }
 
-.news__text {
+.section__text {
   font-family: 'Raleway-Regular';
   font-size: 18px;
 }
 
 @media screen and (min-width: 1200px) {
-  .news__text {
+  .section__text {
     font-size: 24px;
     line-height: 28px;
   }
 }
 
 /* Блок about - Раздел сайта "О проекте" */
-
-.about {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-top: 58px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (max-width: 575px) {
-  .about {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
-
-@media (min-width: 576px) {
-  .about {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .about {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .about {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .about {
-    max-width: 1140px;
-    margin-top: 80px;
-  }
-}
-
-.about__header {
-  position: relative;
-  font-family: 'Raleway-Bold';
-  font-size: 36px;
-  color: #444444;
-  margin-bottom: 31px;
-}
-
-.about__header::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 3px;
-  background: #EE3625;
-  left: 20px;
-  bottom: -10px;
-}
-
-@media screen and (min-width: 1200px) {
-  .about__header {
-    margin-bottom: 48px;
-  }
-  .about__header::after {
-    left: 15px;
-  }
-}
-
-.about__text {
-  font-family: 'Raleway-Regular';
-  font-size: 18px;
-}
-
-@media screen and (min-width: 1200px) {
-  .about__text {
-    font-size: 24px;
-    line-height: 28px;
-  }
-}
 
 .about__text--space {
   margin-top: 37px;
@@ -787,87 +707,6 @@ input[type="text"], input[type="tel"] {
 
 
 /* Блок programme - Раздел сайта "Программа" */
-
-.programme {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-top: 58px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (max-width: 575px) {
-  .programme {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
-
-@media (min-width: 576px) {
-  .programme {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .programme {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .programme {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .programme {
-    max-width: 1140px;
-    margin-top: 80px;
-  }
-}
-
-.programme__header {
-  position: relative;
-  font-family: 'Raleway-Bold';
-  font-size: 36px;
-  color: #444444;
-  margin-bottom: 31px;
-}
-
-.programme__header::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 3px;
-  background: #EE3625;
-  left: 20px;
-  bottom: -10px;
-}
-
-@media screen and (min-width: 1200px) {
-  .programme__header {
-    margin-bottom: 48px;
-  }
-
-  .programme__header::after {
-    left: 15px;
-  }
-}
-
-.programme__text {
-  font-family: 'Raleway-Regular';
-  font-size: 18px;
-}
-
-@media screen and (min-width: 1200px) {
-  .programme__text {
-    font-size: 24px;
-    line-height: 28px;
-  }
-}
 
 .programme__webinars {
   margin-top: 50px;
