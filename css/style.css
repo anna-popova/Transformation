@@ -516,12 +516,95 @@ input[type="text"], input[type="tel"] {
 }
 
 
+/* Блок news - Раздел сайта "Новости" */
+
+.news {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-top: 58px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-width: 575px) {
+  .news {
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: 576px) {
+  .news {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .news {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .news {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .news {
+    max-width: 1140px;
+    margin-top: 80px;
+  }
+}
+
+.news__header {
+  position: relative;
+  font-family: 'Raleway-Bold';
+  font-size: 36px;
+  color: #444444;
+  margin-bottom: 31px;
+}
+
+.news__header::after {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background: #EE3625;
+  left: 20px;
+  bottom: -10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .news__header {
+    margin-bottom: 48px;
+  }
+  .news__header::after {
+    left: 15px;
+  }
+}
+
+.news__text {
+  font-family: 'Raleway-Regular';
+  font-size: 18px;
+}
+
+@media screen and (min-width: 1200px) {
+  .news__text {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
 /* Блок about - Раздел сайта "О проекте" */
 
 .about {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  margin-top: 58px;
   margin-right: auto;
   margin-left: auto;
 }
@@ -554,6 +637,7 @@ input[type="text"], input[type="tel"] {
 @media (min-width: 1200px) {
   .about {
     max-width: 1140px;
+    margin-top: 80px;
   }
 }
 
@@ -713,14 +797,6 @@ input[type="text"], input[type="tel"] {
   margin-left: auto;
 }
 
-/* .programme__container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-} */
-
 @media (max-width: 575px) {
   .programme {
     padding-right: 30px;
@@ -749,7 +825,7 @@ input[type="text"], input[type="tel"] {
 @media (min-width: 1200px) {
   .programme {
     max-width: 1140px;
-    margin-top: 125px;
+    margin-top: 80px;
   }
 }
 
@@ -966,7 +1042,7 @@ input[type="text"], input[type="tel"] {
 
 @media screen and (min-width: 1200px) {
   .section-results {
-    margin-top: 113px;
+    margin-top: 80px;
   }
 }
 .btn {
