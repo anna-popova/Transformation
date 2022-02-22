@@ -516,48 +516,50 @@ input[type="text"], input[type="tel"] {
 }
 
 
-/* Блок about - Раздел сайта "О проекте" */
+/* Общие стили */
 
-.about {
+.section {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
+  margin-top: 58px;
   margin-right: auto;
   margin-left: auto;
 }
 
 @media (max-width: 575px) {
-  .about {
+  .section {
     padding-right: 30px;
     padding-left: 30px;
   }
 }
 
 @media (min-width: 576px) {
-  .about {
+  .section {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .about {
+  .section {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .about {
+  .section {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .about {
+  .section {
     max-width: 1140px;
+    margin-top: 80px;
   }
 }
 
-.about__header {
+.section__header {
   position: relative;
   font-family: 'Raleway-Bold';
   font-size: 36px;
@@ -565,7 +567,7 @@ input[type="text"], input[type="tel"] {
   margin-bottom: 31px;
 }
 
-.about__header::after {
+.section__header::after {
   content: "";
   position: absolute;
   width: 100px;
@@ -576,25 +578,27 @@ input[type="text"], input[type="tel"] {
 }
 
 @media screen and (min-width: 1200px) {
-  .about__header {
+  .section__header {
     margin-bottom: 48px;
   }
-  .about__header::after {
+  .section__header::after {
     left: 15px;
   }
 }
 
-.about__text {
+.section__text {
   font-family: 'Raleway-Regular';
   font-size: 18px;
 }
 
 @media screen and (min-width: 1200px) {
-  .about__text {
+  .section__text {
     font-size: 24px;
     line-height: 28px;
   }
 }
+
+/* Блок about - Раздел сайта "О проекте" */
 
 .about__text--space {
   margin-top: 37px;
@@ -703,95 +707,6 @@ input[type="text"], input[type="tel"] {
 
 
 /* Блок programme - Раздел сайта "Программа" */
-
-.programme {
-  margin-top: 58px;
-}
-
-@media screen and (min-width: 1200px) {
-  .programme {
-    margin-top: 125px;
-  }
-}
-
-.programme__container {
-  width: 100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-}
-
-@media (max-width: 575px) {
-  .programme__container {
-    padding-right: 30px;
-    padding-left: 30px;
-  }
-}
-
-@media (min-width: 576px) {
-  .programme__container {
-    max-width: 540px;
-  }
-}
-
-@media (min-width: 768px) {
-  .programme__container {
-    max-width: 720px;
-  }
-}
-
-@media (min-width: 992px) {
-  .programme__container {
-    max-width: 960px;
-  }
-}
-
-@media (min-width: 1200px) {
-  .programme__container {
-    max-width: 1140px;
-  }
-}
-
-.programme__header {
-  position: relative;
-  font-family: 'Raleway-Bold';
-  font-size: 36px;
-  color: #444444;
-  margin-bottom: 31px;
-}
-
-.programme__header::after {
-  content: "";
-  position: absolute;
-  width: 100px;
-  height: 3px;
-  background: #EE3625;
-  left: 20px;
-  bottom: -10px;
-}
-
-@media screen and (min-width: 1200px) {
-  .programme__header {
-    margin-bottom: 48px;
-  }
-
-  .programme__header::after {
-    left: 15px;
-  }
-}
-
-.programme__text {
-  font-family: 'Raleway-Regular';
-  font-size: 18px;
-}
-
-@media screen and (min-width: 1200px) {
-  .programme__text {
-    font-size: 24px;
-    line-height: 28px;
-  }
-}
 
 .programme__webinars {
   margin-top: 50px;
@@ -966,7 +881,7 @@ input[type="text"], input[type="tel"] {
 
 @media screen and (min-width: 1200px) {
   .section-results {
-    margin-top: 113px;
+    margin-top: 80px;
   }
 }
 .btn {
