@@ -705,51 +705,51 @@ input[type="text"], input[type="tel"] {
 /* Блок programme - Раздел сайта "Программа" */
 
 .programme {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
   margin-top: 58px;
+  margin-right: auto;
+  margin-left: auto;
 }
 
-@media screen and (min-width: 1200px) {
-  .programme {
-    margin-top: 125px;
-  }
-}
-
-.programme__container {
+/* .programme__container {
   width: 100%;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-}
+} */
 
 @media (max-width: 575px) {
-  .programme__container {
+  .programme {
     padding-right: 30px;
     padding-left: 30px;
   }
 }
 
 @media (min-width: 576px) {
-  .programme__container {
+  .programme {
     max-width: 540px;
   }
 }
 
 @media (min-width: 768px) {
-  .programme__container {
+  .programme {
     max-width: 720px;
   }
 }
 
 @media (min-width: 992px) {
-  .programme__container {
+  .programme {
     max-width: 960px;
   }
 }
 
 @media (min-width: 1200px) {
-  .programme__container {
+  .programme {
     max-width: 1140px;
+    margin-top: 125px;
   }
 }
 
