@@ -598,28 +598,26 @@ input[type="text"], input[type="tel"] {
   }
 }
 
-/* Блок about - Раздел сайта "О проекте" */
-
-.about__text--space {
+.section__text--space {
   margin-top: 37px;
   margin-bottom: 25px;
 }
 
 @media screen and (min-width: 1200px) {
-  .about__text--space {
+  .section__text--space {
     margin-top: 69px;
     margin-bottom: 69px;
   }
 }
 
-.about__cards {
+.section__cards {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 }
 
 @media screen and (min-width: 768px) {
-  .about__cards {
+  .section__cards {
     align-items: center;
     flex-direction: row;
   }
@@ -705,10 +703,7 @@ input[type="text"], input[type="tel"] {
   }
 }
 
-
-/* Блок programme - Раздел сайта "Программа" */
-
-.programme__webinars {
+.section__webinars {
   margin-top: 50px;
 }
 
