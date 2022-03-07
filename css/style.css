@@ -864,6 +864,101 @@ input[type="text"], input[type="tel"] {
 }
 
 
+/* секция Кураторы */
+
+@media screen and (min-width: 768px) {
+  .curators-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .curators-wrapper {
+    margin-top: 69px;
+  }
+}
+
+.curator {
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
+  margin-top: 25px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 17px;
+  text-align: center;
+  font-family: 'Raleway-Regular';
+  font-size: 16px;
+  font-weight: 400;
+  border-radius: 10px;
+  box-shadow: 0 5px 90px 0 rgb(0 0 0 / 10%);
+}
+
+@media screen and (min-width: 768px) {
+  .curator {
+    margin: 0 20px 0 0;
+    padding: 25px;
+    font-size: 18px;
+  }
+
+  .curator:last-child {
+    margin-right: 0;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .curator {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 530px;
+    max-width: 530px;
+    padding: 35px;
+    font-size: 24px;
+    line-height: 28px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .curator__description {
+    margin-bottom: 20px;
+  }
+}
+
+.curator__name {
+  font-size: 18px;
+  font-family: 'Raleway-Bold';
+}
+
+@media screen and (min-width: 768px) {
+  .curator__name {
+    font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .curator__name {
+    margin-bottom: 26px;
+    font-size: 30px;
+  }
+}
+
+.curator__img {
+  display: block;
+  height: 300px;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 1200px) {
+  .curator__img {
+    height: 500px;
+  }
+}
+
+
 /* секция Результаты */
 
 .section-results {
