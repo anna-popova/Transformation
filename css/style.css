@@ -82,6 +82,10 @@ header::before{
   top: 0;
 }
 
+.d-none {
+  display: none;
+}
+
 .header-title {
   text-align: center;
   z-index: 1;
